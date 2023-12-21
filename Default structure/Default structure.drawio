@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2023-12-21T01:28:44.397Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0" etag="9snqibmCdqaohl-uzyBO" version="22.1.11" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-21T01:38:32.141Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0" etag="uR2zUNS5FFzgloY1puNi" version="22.1.11" type="github">
   <diagram id="07fea595-8f29-1299-0266-81d95cde20df" name="Page-1">
-    <mxGraphModel dx="4260" dy="2589" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="3951" dy="2413" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="UHulExDoLJq-W7tsx6bJ-13" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;arcSize=8;fillColor=#FAB2AF;strokeColor=none;fillStyle=dots;dashed=1;glass=1;shadow=0;perimeterSpacing=1;" vertex="1" parent="1">
+          <mxGeometry x="1640" y="585" width="220" height="185" as="geometry" />
+        </mxCell>
         <mxCell id="gFmoWF3cjkSiKpW6BkcZ-7" value="grub.cfg" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="1790" y="679" width="70" height="60" as="geometry" />
         </mxCell>
