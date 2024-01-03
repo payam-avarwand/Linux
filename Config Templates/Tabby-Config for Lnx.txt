@@ -1,0 +1,559 @@
+version: 7
+profiles:
+  - type: ssh
+    icon: fas fa-desktop
+    options:
+      host: 192.168.1.13
+      user: PayamAP
+      algorithms:
+        kex:
+          - curve25519-sha256
+          - curve25519-sha256@libssh.org
+          - diffie-hellman-group-exchange-sha256
+          - diffie-hellman-group1-sha1
+          - diffie-hellman-group14-sha1
+          - diffie-hellman-group14-sha256
+          - diffie-hellman-group15-sha512
+          - diffie-hellman-group16-sha512
+          - diffie-hellman-group17-sha512
+          - diffie-hellman-group18-sha512
+          - ecdh-sha2-nistp256
+          - ecdh-sha2-nistp384
+          - ecdh-sha2-nistp521
+        serverHostKey:
+          - ecdsa-sha2-nistp256
+          - ecdsa-sha2-nistp384
+          - ecdsa-sha2-nistp521
+          - rsa-sha2-256
+          - rsa-sha2-512
+          - ssh-dss
+          - ssh-ed25519
+          - ssh-rsa
+        hmac:
+          - hmac-sha1
+          - hmac-sha1-etm@openssh.com
+          - hmac-sha2-256
+          - hmac-sha2-256-etm@openssh.com
+          - hmac-sha2-512
+          - hmac-sha2-512-etm@openssh.com
+        cipher:
+          - aes128-ctr
+          - aes128-gcm
+          - aes128-gcm@openssh.com
+          - aes192-ctr
+          - aes256-ctr
+          - aes256-gcm
+          - aes256-gcm@openssh.com
+      input: {}
+      privateKeys: []
+      forwardedPorts: []
+      scripts: []
+    weight: -1
+    name: AP - SSH
+    id: ssh:custom:AP-SSH:272d27f0-2de1-4b1a-b422-98f629cdcc98
+  - type: serial
+    name: Console - the middle port on USB Hub
+    icon: fas fa-microchip
+    options:
+      port: COM3
+      baudrate: 9600
+      scripts: []
+      input: {}
+    id: >-
+      serial:custom:Console-the-middle-port-on-USB-Hub:ab4d246e-f56d-4db9-876c-dae75916feb8
+  - type: local
+    name: Git Bash
+    icon: >-
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.925
+      113.923"><defs><clipPath id="aaaaaaaa"><path d="M0
+      0h2183.73v912H0V0z"></path></clipPath><clipPath id="bbbbbbbb"><path
+      d="M230.892 51.977L181.15 2.238a7.336 7.336 0 00-10.375 0l-10.328 10.33
+      13.102 13.102c3.046-1.028 6.537-.339 8.964 2.089a8.72 8.72 0 012.07
+      9.02l12.627 12.627c3.055-1.053 6.58-.373 9.02 2.07a8.727 8.727 0 010
+      12.346 8.729 8.729 0 01-12.349 0 8.734 8.734 0 01-1.9-9.494L180.204
+      42.55v30.99a8.806 8.806 0 012.309 1.652c3.41 3.409 3.41 8.933 0
+      12.347-3.411 3.41-8.938 3.41-12.346 0-3.41-3.414-3.41-8.938 0-12.347a8.735
+      8.735 0 012.859-1.905V42.009a8.636 8.636 0 01-2.859-1.905 8.728 8.728 0
+      01-1.88-9.544L155.37 17.642l-34.106 34.105a7.339 7.339 0 000 10.378l49.742
+      49.74a7.338 7.338 0 0010.376 0l49.509-49.51a7.341 7.341 0 000-10.378"
+      fill="#f03c2e"></path></clipPath></defs><g transform="translate(-119.116
+      -.075)" clip-path="url(#bbbbbbbb)"><path
+      d="M230.435-10.813l-49.742-49.739a7.336 7.336 0 00-10.374 0l-49.51
+      49.51a7.339 7.339 0 000 10.378l49.741 49.738a7.338 7.338 0 0010.376
+      0l49.51-49.508a7.341 7.341 0 000-10.379" fill="#ff8080"></path><path
+      d="M293.393 51.928L243.65 2.188a7.336 7.336 0 00-10.375 0c-16.502
+      16.505-33.006 33.007-49.51 49.51a7.339 7.339 0 000 10.378l49.742
+      49.739a7.338 7.338 0 0010.376 0l49.509-49.509a7.341 7.341 0 000-10.378"
+      fill="#8dd35f"></path><path d="M167.436 51.52L117.693 1.783a7.336 7.336 0
+      00-10.374 0l-49.51 49.509a7.339 7.339 0 000 10.378l49.741 49.74a7.338
+      7.338 0 0010.376-.001l49.51-49.508a7.341 7.341 0 000-10.38"
+      fill="#80b3ff"></path><path d="M230.13 114.117l-49.743-49.739a7.336 7.336
+      0 00-10.374 0l-49.51 49.51a7.339 7.339 0 000 10.378l49.741 49.738a7.338
+      7.338 0 0010.376 0l49.51-49.508a7.341 7.341 0 000-10.379"
+      fill="#ffe680"></path></g></svg>
+    options:
+      command: C:\\Program Files\\Git\\bin\\bash.exe
+      args:
+        - '--login'
+        - '-i'
+      env:
+        WT_SESSION: 0
+      runAsAdministrator: true
+    id: local:custom:Git-Bash:fe624715-ef52-474d-981c-f57b8cebeed1
+  - type: local
+    name: GitHub - Network_Diagrams
+    icon: >-
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.925
+      113.923"><defs><clipPath id="aaaaaaaa"><path d="M0
+      0h2183.73v912H0V0z"></path></clipPath><clipPath id="bbbbbbbb"><path
+      d="M230.892 51.977L181.15 2.238a7.336 7.336 0 00-10.375 0l-10.328 10.33
+      13.102 13.102c3.046-1.028 6.537-.339 8.964 2.089a8.72 8.72 0 012.07
+      9.02l12.627 12.627c3.055-1.053 6.58-.373 9.02 2.07a8.727 8.727 0 010
+      12.346 8.729 8.729 0 01-12.349 0 8.734 8.734 0 01-1.9-9.494L180.204
+      42.55v30.99a8.806 8.806 0 012.309 1.652c3.41 3.409 3.41 8.933 0
+      12.347-3.411 3.41-8.938 3.41-12.346 0-3.41-3.414-3.41-8.938 0-12.347a8.735
+      8.735 0 012.859-1.905V42.009a8.636 8.636 0 01-2.859-1.905 8.728 8.728 0
+      01-1.88-9.544L155.37 17.642l-34.106 34.105a7.339 7.339 0 000 10.378l49.742
+      49.74a7.338 7.338 0 0010.376 0l49.509-49.51a7.341 7.341 0 000-10.378"
+      fill="#f03c2e"></path></clipPath></defs><g transform="translate(-119.116
+      -.075)" clip-path="url(#bbbbbbbb)"><path
+      d="M230.435-10.813l-49.742-49.739a7.336 7.336 0 00-10.374 0l-49.51
+      49.51a7.339 7.339 0 000 10.378l49.741 49.738a7.338 7.338 0 0010.376
+      0l49.51-49.508a7.341 7.341 0 000-10.379" fill="#ff8080"></path><path
+      d="M293.393 51.928L243.65 2.188a7.336 7.336 0 00-10.375 0c-16.502
+      16.505-33.006 33.007-49.51 49.51a7.339 7.339 0 000 10.378l49.742
+      49.739a7.338 7.338 0 0010.376 0l49.509-49.509a7.341 7.341 0 000-10.378"
+      fill="#8dd35f"></path><path d="M167.436 51.52L117.693 1.783a7.336 7.336 0
+      00-10.374 0l-49.51 49.509a7.339 7.339 0 000 10.378l49.741 49.74a7.338
+      7.338 0 0010.376-.001l49.51-49.508a7.341 7.341 0 000-10.38"
+      fill="#80b3ff"></path><path d="M230.13 114.117l-49.743-49.739a7.336 7.336
+      0 00-10.374 0l-49.51 49.51a7.339 7.339 0 000 10.378l49.741 49.738a7.338
+      7.338 0 0010.376 0l49.51-49.508a7.341 7.341 0 000-10.379"
+      fill="#ffe680"></path></g></svg>
+    options:
+      command: C:\Program Files\Git\bin\bash.exe
+      args:
+        - '--login'
+        - '-i'
+      env:
+        WT_SESSION: 0
+      cwd: F:\Payam Avarwand\My Repos\GitHub\Network_Diagrams
+    id: local:custom:GitHub-Network_Diagrams:9a2695b2-8670-48c8-aae6-e4cab01caf50
+  - type: ssh
+    name: PayamR
+    icon: fas fa-desktop
+    options:
+      host: 192.168.1.1
+      user: payam1
+      algorithms:
+        kex:
+          - curve25519-sha256
+          - curve25519-sha256@libssh.org
+          - diffie-hellman-group-exchange-sha256
+          - diffie-hellman-group14-sha1
+          - diffie-hellman-group14-sha256
+          - diffie-hellman-group15-sha512
+          - diffie-hellman-group16-sha512
+          - diffie-hellman-group17-sha512
+          - diffie-hellman-group18-sha512
+          - ecdh-sha2-nistp256
+          - ecdh-sha2-nistp384
+          - ecdh-sha2-nistp521
+      auth: password
+      input: {}
+    weight: -1
+    id: ssh:custom:PayamR:0f6506b6-8da6-4fab-ae12-ae81a8e0914a
+  - type: local
+    name: GitLab - Done Books
+    icon: >-
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.925
+      113.923"><defs><clipPath id="aaaaaaaa"><path d="M0
+      0h2183.73v912H0V0z"></path></clipPath><clipPath id="bbbbbbbb"><path
+      d="M230.892 51.977L181.15 2.238a7.336 7.336 0 00-10.375 0l-10.328 10.33
+      13.102 13.102c3.046-1.028 6.537-.339 8.964 2.089a8.72 8.72 0 012.07
+      9.02l12.627 12.627c3.055-1.053 6.58-.373 9.02 2.07a8.727 8.727 0 010
+      12.346 8.729 8.729 0 01-12.349 0 8.734 8.734 0 01-1.9-9.494L180.204
+      42.55v30.99a8.806 8.806 0 012.309 1.652c3.41 3.409 3.41 8.933 0
+      12.347-3.411 3.41-8.938 3.41-12.346 0-3.41-3.414-3.41-8.938 0-12.347a8.735
+      8.735 0 012.859-1.905V42.009a8.636 8.636 0 01-2.859-1.905 8.728 8.728 0
+      01-1.88-9.544L155.37 17.642l-34.106 34.105a7.339 7.339 0 000 10.378l49.742
+      49.74a7.338 7.338 0 0010.376 0l49.509-49.51a7.341 7.341 0 000-10.378"
+      fill="#f03c2e"></path></clipPath></defs><g transform="translate(-119.116
+      -.075)" clip-path="url(#bbbbbbbb)"><path
+      d="M230.435-10.813l-49.742-49.739a7.336 7.336 0 00-10.374 0l-49.51
+      49.51a7.339 7.339 0 000 10.378l49.741 49.738a7.338 7.338 0 0010.376
+      0l49.51-49.508a7.341 7.341 0 000-10.379" fill="#ff8080"></path><path
+      d="M293.393 51.928L243.65 2.188a7.336 7.336 0 00-10.375 0c-16.502
+      16.505-33.006 33.007-49.51 49.51a7.339 7.339 0 000 10.378l49.742
+      49.739a7.338 7.338 0 0010.376 0l49.509-49.509a7.341 7.341 0 000-10.378"
+      fill="#8dd35f"></path><path d="M167.436 51.52L117.693 1.783a7.336 7.336 0
+      00-10.374 0l-49.51 49.509a7.339 7.339 0 000 10.378l49.741 49.74a7.338
+      7.338 0 0010.376-.001l49.51-49.508a7.341 7.341 0 000-10.38"
+      fill="#80b3ff"></path><path d="M230.13 114.117l-49.743-49.739a7.336 7.336
+      0 00-10.374 0l-49.51 49.51a7.339 7.339 0 000 10.378l49.741 49.738a7.338
+      7.338 0 0010.376 0l49.51-49.508a7.341 7.341 0 000-10.379"
+      fill="#ffe680"></path></g></svg>
+    options:
+      command: C:\Program Files\Git\bin\bash.exe
+      args:
+        - '--login'
+        - '-i'
+      env:
+        WT_SESSION: 0
+      cwd: F:\Payam Avarwand\My Repos\GitLab\Done_Books
+    id: local:custom:GitLab:18c002b1-a003-49fd-8e78-a1730fcbf5ca
+hotkeys:
+  toggle-window:
+    - Ctrl-Space
+  paste:
+    - Ctrl-V
+  select-all: []
+  zoom-in:
+    - Ctrl-]
+  zoom-out:
+    - Ctrl-/
+  home:
+    - Ctrl-A
+  end:
+    - Ctrl-E
+  previous-word:
+    - Ctrl-Left
+  next-word:
+    - Ctrl-Right
+  delete-previous-word:
+    - Ctrl-Backspace
+  delete-line:
+    - Ctrl-Shift-Backspace
+  delete-next-word:
+    - Ctrl-Delete
+  search:
+    - Ctrl-F
+  pane-focus-all:
+    - Ctrl-Shift-I
+  focus-all-tabs:
+    - Ctrl-Alt-Shift-I
+  scroll-to-top:
+    - Ctrl-PageUp
+  scroll-up:
+    - Alt-PageUp
+  scroll-down:
+    - Alt-PageDown
+  scroll-to-bottom:
+    - Ctrl-PageDown
+  restart-telnet-session: []
+  restart-ssh-session: []
+  launch-winscp: []
+  settings-tab: {}
+  settings:
+    - Ctrl-Alt-S
+  serial:
+    - Alt-K
+  restart-serial-session: []
+  new-window:
+    - Ctrl-N
+  profile:
+    local:binbash:
+      - Ctrl-T
+    local:powershell: []
+  profile-selectors: {}
+  toggle-fullscreen:
+    - F11
+  close-tab:
+    - Ctrl-W
+  reopen-tab:
+    - Ctrl-Shift-Z
+  toggle-last-tab: []
+  rename-tab:
+    - Ctrl-Shift-R
+  next-tab:
+    - Ctrl-Shift-Right
+    - Ctrl-Tab
+  previous-tab:
+    - Ctrl-Shift-Left
+    - Ctrl-Shift-Tab
+  move-tab-left:
+    - Ctrl-Shift-PageUp
+  move-tab-right:
+    - Ctrl-Shift-PageDown
+  rearrange-panes:
+    - Ctrl-Shift
+  duplicate-tab:
+    - Ctrl-D
+  restart-tab: []
+  explode-tab:
+    - Ctrl-Shift-T
+  combine-tabs:
+    - Ctrl-Shift-D
+  tab-1:
+    - Ctrl-1
+  tab-2:
+    - Ctrl-2
+  tab-3:
+    - Ctrl-3
+  tab-4:
+    - Ctrl-4
+  tab-5:
+    - Ctrl-5
+  tab-6:
+    - Alt-6
+  tab-7:
+    - Alt-7
+  tab-8:
+    - Alt-8
+  tab-9:
+    - Alt-9
+  tab-10:
+    - Alt-0
+  tab-11: []
+  tab-12: []
+  tab-13: []
+  tab-14: []
+  tab-15: []
+  tab-16: []
+  tab-17: []
+  tab-18: []
+  tab-19: []
+  tab-20: []
+  split-right:
+    - Shift-Right
+  split-bottom:
+    - Shift-Down
+  split-left:
+    - Shift-Left
+  split-top:
+    - Shift-Up
+  pane-nav-right:
+    - Space-Right
+  pane-nav-down:
+    - Space-Down
+  pane-nav-up:
+    - Space-Up
+  pane-nav-left:
+    - Space-Left
+  pane-nav-previous:
+    - Ctrl-Tab
+  pane-nav-next: []
+  pane-nav-1: []
+  pane-nav-2: []
+  pane-nav-3: []
+  pane-nav-4: []
+  pane-nav-5: []
+  pane-nav-6: []
+  pane-nav-7: []
+  pane-nav-8: []
+  pane-nav-9: []
+  pane-maximize:
+    - Ctrl-Alt-Enter
+  pane-increase-vertical: []
+  pane-decrease-vertical: []
+  pane-increase-horizontal: []
+  pane-decrease-horizontal: []
+  close-pane:
+    - Shift-W
+  switch-profile:
+    - Shift-O
+  profile-selector:
+    - Ctrl-O
+  command-selector:
+    - Ctrl-Shift-P
+  ctrl-c:
+    - Ctrl-C
+  copy:
+    - Ctrl-Shift-C
+  new-tab:
+    - Ctrl-T
+  clear:
+    - Ctrl-L
+  copy-current-path: []
+  reconnect-tab: []
+  disconnect-tab: []
+  reset-zoom:
+    - Ctrl-0
+terminal:
+  searchOptions: {}
+  colorScheme:
+    name: Homebrew
+    foreground: rgb(252, 228, 236)
+    background: '#2a0e4b'
+    cursor: '#f06292'
+    colors:
+      - '#000000'
+      - '#ff7043'
+      - '#00a600'
+      - '#999900'
+      - '#e8eaf6'
+      - '#b200b2'
+      - '#81d4fa'
+      - '#fff9c4'
+      - '#ec407a'
+      - '#ff7043'
+      - '#00d900'
+      - '#e5e500'
+      - hsl(199, 91%, 64%)
+      - '#e500e5'
+      - '#00e5e5'
+      - '#e5e5e5'
+    selection: '#b2ebf2'
+    selectionForeground: '#ffe0b2'
+    cursorAccent: '#ffeb3b'
+  customColorSchemes:
+    - name: Blazer
+      foreground: '#d9e6f2'
+      background: '#0d1926'
+      cursor: '#d9e6f2'
+      colors:
+        - '#000000'
+        - '#b87a7a'
+        - '#7ab87a'
+        - '#b8b87a'
+        - '#7a7ab8'
+        - '#b87ab8'
+        - '#7ab8b8'
+        - '#d9d9d9'
+        - '#262626'
+        - '#dbbdbd'
+        - '#bddbbd'
+        - '#dbdbbd'
+        - '#bdbddb'
+        - '#dbbddb'
+        - '#bddbdb'
+        - '#e53935'
+    - name: Ciapre
+      foreground: '#aea47a'
+      background: '#191c27'
+      cursor: '#92805b'
+      colors:
+        - '#181818'
+        - '#810009'
+        - '#48513b'
+        - '#cc8b3f'
+        - '#576d8c'
+        - '#724d7c'
+        - '#5c4f4b'
+        - '#aea47f'
+        - '#555555'
+        - '#ac3835'
+        - '#a6a75d'
+        - '#dcdf7c'
+        - '#3097c6'
+        - '#d33061'
+        - '#ff0000'
+        - '#f4f4f4'
+    - name: base2tone-forest-dark
+      foreground: '#ffffff'
+      background: '#2a2d2a'
+      cursor: '#656b47'
+      colors:
+        - '#2a2d2a'
+        - '#5c705c'
+        - '#bfd454'
+        - '#e5fb79'
+        - '#687d68'
+        - '#bfd454'
+        - '#8fae8f'
+        - '#a1b5a1'
+        - '#535f53'
+        - '#cbe25a'
+        - '#353b35'
+        - '#485148'
+        - '#5e6e5e'
+        - '#c8e4c8'
+        - '#b1c44f'
+        - '#f0fff0'
+    - name: Homebrew
+      foreground: rgb(252, 228, 236)
+      background: '#2a0e4b'
+      cursor: '#f06292'
+      colors:
+        - '#000000'
+        - '#ff7043'
+        - '#00a600'
+        - '#999900'
+        - '#9fa8da'
+        - '#b200b2'
+        - '#81d4fa'
+        - '#fff9c4'
+        - '#ec407a'
+        - '#ff7043'
+        - '#00d900'
+        - '#e5e500'
+        - hsl(199, 91%, 64%)
+        - '#e500e5'
+        - '#00e5e5'
+        - '#e5e5e5'
+      selection: '#b2ebf2'
+      selectionForeground: '#ffe0b2'
+      cursorAccent: '#ffeb3b'
+  font: IBM Plex Mono Light
+  fontWeightBold: 100
+  fontWeight: 200
+  minimumContrastRatio: 0
+  cursor: beam
+  bell: audible
+  showTabProfileIcon: true
+  hideTabIndex: true
+  ligatures: true
+  lightColorScheme:
+    name: Tabby Default Light
+    foreground: '#4d4d4c'
+    background: '#ffffff'
+    cursor: '#4d4d4c'
+    colors:
+      - '#000000'
+      - '#c82829'
+      - '#718c00'
+      - '#eab700'
+      - '#4271ae'
+      - '#8959a8'
+      - '#3e999f'
+      - '#ffffff'
+      - '#000000'
+      - '#c82829'
+      - '#718c00'
+      - '#eab700'
+      - '#4271ae'
+      - '#8959a8'
+      - '#3e999f'
+      - '#ffffff'
+  fontSize: 15
+ssh:
+  knownHosts:
+    - host: 192.168.1.1
+      port: 22
+      type: ssh-rsa
+      digest: g/VwsCjka8ChKj/K+FuEA0p4Obukxdph2Lq8gOcf4FE=
+    - host: gw01nyc1rls.nyc1.rls.io
+      port: 22
+      type: ssh-rsa
+      digest: FuFwHTt7fmOhMaLT8DeKnfZmelGqgAsbvQiQ0q81j/0=
+    - host: 192.168.0.1
+      port: 22
+      type: ssh-rsa
+      digest: JZsjSXyf7jiE04MSqRL53luvcNP4plI0dceF3K451GY=
+    - host: 192.168.1.13
+      port: 22
+      type: ecdsa-sha2-nistp256
+      digest: ajBaKU3bdiyNDtPwjuJIfUx0vnp//tkJhOG+IcSL/tc=
+configSync:
+  parts: {}
+clickableLinks: {}
+accessibility: {}
+appearance:
+  dock: bottom
+  dockFill: 0.3
+  dockAlwaysOnTop: false
+  vibrancy: true
+  opacity: 0.97
+hacks:
+  enableFluentBackground: true
+language: en-US
+enableWelcomeTab: false
+pluginBlacklist: []
+profileDefaults:
+  ssh:
+    disableDynamicTitle: true
+groups: []
+providerBlacklist: []
+profileBlacklist: []
+commandBlacklist: []
+
