@@ -209,9 +209,9 @@ hotkeys:
     - Ctrl-V
   select-all: []
   zoom-in:
-    - Ctrl-]
+    - Ctrl-=
   zoom-out:
-    - Ctrl-/
+    - Ctrl--
   home:
     - Ctrl-A
   end:
@@ -267,7 +267,6 @@ hotkeys:
     - Ctrl-Shift-R
   next-tab:
     - Ctrl-Shift-Right
-    - Ctrl-Tab
   previous-tab:
     - Ctrl-Shift-Left
     - Ctrl-Shift-Tab
@@ -348,10 +347,7 @@ hotkeys:
   pane-decrease-vertical: []
   pane-increase-horizontal: []
   pane-decrease-horizontal: []
-  close-pane:
-    - Shift-W
-  switch-profile:
-    - Shift-O
+  switch-profile: []
   profile-selector:
     - Ctrl-O
   command-selector:
@@ -369,6 +365,8 @@ hotkeys:
   disconnect-tab: []
   reset-zoom:
     - Ctrl-0
+  close-pane:
+    - Ctrl-Shift-W
 terminal:
   searchOptions: {}
   colorScheme:
@@ -381,10 +379,10 @@ terminal:
       - '#ff7043'
       - '#00a600'
       - '#999900'
-      - '#e8eaf6'
+      - '#0288d1'
       - '#b200b2'
-      - '#81d4fa'
-      - '#fff9c4'
+      - '#ad1457'
+      - '#f0f4c3'
       - '#ec407a'
       - '#ff7043'
       - '#00d900'
@@ -392,7 +390,7 @@ terminal:
       - hsl(199, 91%, 64%)
       - '#e500e5'
       - '#00e5e5'
-      - '#e5e5e5'
+      - '#dce775'
     selection: '#b2ebf2'
     selectionForeground: '#ffe0b2'
     cursorAccent: '#ffeb3b'
@@ -469,10 +467,10 @@ terminal:
         - '#ff7043'
         - '#00a600'
         - '#999900'
-        - '#9fa8da'
+        - '#0288d1'
         - '#b200b2'
-        - '#81d4fa'
-        - '#fff9c4'
+        - '#ad1457'
+        - '#f0f4c3'
         - '#ec407a'
         - '#ff7043'
         - '#00d900'
@@ -480,7 +478,7 @@ terminal:
         - hsl(199, 91%, 64%)
         - '#e500e5'
         - '#00e5e5'
-        - '#e5e5e5'
+        - '#dce775'
       selection: '#b2ebf2'
       selectionForeground: '#ffe0b2'
       cursorAccent: '#ffeb3b'
