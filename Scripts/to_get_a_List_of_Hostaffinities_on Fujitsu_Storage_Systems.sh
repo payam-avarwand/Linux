@@ -1,4 +1,4 @@
-# There are 5 Fujitsu Storage systems | they have similar names: "HA-FJS-05" til "HA-FJS-09"
+# Assuming there are 5 Fujitsu Storage systems, which have similar names: "HA-FJS-05" til "HA-FJS-09"
 # We need separate lists of all Host Affinities on storage systems that contain just names of Host Affinities
 # It's possible to call Host Affinities over SSH-Connections > CLI > "show host-affinity"
 # The SSH addresses of our Fujitsu Storage systems are in the range 10.0.0.x | the last octets are not in any particular order!

@@ -1,4 +1,4 @@
-# We have 50 Broadcom SAN-Switches, and sometimes we need to connect to them over ssh-CLI to run a command.
+# Assuming we have 100 Broadcom SAN-Switches, and sometimes we need to connect to them over ssh-CLI to run a command.
 # To run this script, it will need 2 Arguments:
     # the first one will be the last octet of the Switch SSH-address, since the first octet of all Switch addresses are the same> 10.1.5.X
     # the second one will be the command we are going to run on the Switch
